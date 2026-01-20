@@ -1,4 +1,4 @@
-<!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8" /> <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" /> <title>Sp1Dy_Gamer™ Tetris</title> <style> body { background: linear-gradient(to bottom, #0f0f0f, #1a1a1a); color: #00ffe0; font-family: 'Orbitron', sans-serif; text-align: center; margin: 0; padding: 0; overflow-x: hidden; touch-action: none; -webkit-user-select: none; -webkit-touch-callout: none; } canvas { background: #111; display: block; margin: 20px auto; border: 3px solid #00ffe0; box-shadow: 0 0 20px #00ffe0; max-width: 90vw; height: auto; touch-action: none; } h1 { margin-top: 20px; font-size: 2.5em; color: #ff0055; text-shadow: 0 0 10px #ff0055; } @media (max-width: 600px) { h1 { display: block; } } #score, #level { font-size: 1.2em; margin-top: -10px; color: #fff; } #branding { margin-top: 10px; font-size: 0.9em; color: #888; } #restartButton, #pauseButton { margin-top: 15px; padding: 10px 20px; font-size: 1em; background-color: #ff0055; color: #fff; border: none; border-radius: 5px; cursor: pointer; box-shadow: 0 0 10px #ff0055; transition: background-color 0.3s ease; } #restartButton:hover, #pauseButton:hover { background-color: #e6004c; } #gameOverScreen { position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(0, 0, 0, 0.95); border: 3px solid #ff0055; box-shadow: 0 0 20px #ff0055; padding: 30px 50px; color: #ff0055; font-family: 'Orbitron', sans-serif; font-size: 1.5em; text-align: center; display: none; z-index: 1000; border-radius: 10px; width: 90vw; max-width: 400px; } #gameOverScreen button { margin-top: 20px; padding: 10px 25px; font-size: 1.2em; background-color: #ff0055; color: #fff; border: none; border-radius: 5px; cursor: pointer; box-shadow: 0 0 10px #ff0055; transition: background-color 0.3s ease; } #gameOverScreen button:hover { background-color: #e6004c; } #controlsContainer { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; max-width: 600px; margin: 20px auto; } #desktopControls { display: flex; gap: 15px; } #desktopControls button { padding: 10px 20px; font-size: 1em; background-color: #ff0055; color: #fff; border: none; border-radius: 5px; cursor: pointer; box-shadow: 0 0 10px #ff0055; transition: background-color 0.3s ease; } #desktopControls button:hover { background-color: #e6004c; } @media (max-width: 600px) { #desktopControls { display: flex; justify-content: center; gap: 10px; } canvas { width: 100vw; height: auto; } } #mobileControls { display: none !important; } </style> <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet"> </head> <body> <h1>Sp1Dy_Gamer™ Tetris</h1> <div id="score">Score: 0</div> <div id="level">Level: 0</div> <canvas id="tetris" width="240" height="400"></canvas> <div id="controlsContainer"> <div id="desktopControls"> <button id="pauseButton">Pause Game</button> <button id="restartButton">Restart Game</button> </div> <div id="mobileControls"> <!-- Mobile buttons removed for gesture control --> </div> </div> <div id="branding"> 🎮 Powered by Sp1Dy_Gamer™ | Subscribe for epic gaming content! </div> <div id="gameOverScreen"> <div id="finalScore">Game Over! Your Score: 0</div> <button id="gameOverRestart">Restart Game</button> </div>
+<!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8" /> <meta name="viewport" content="width=device-width, initial-scale=1" /> <title>Sp1Dy_Gamer™ Tetris</title> <style> body { background: linear-gradient(to bottom, #0f0f0f, #1a1a1a); color: #00ffe0; font-family: 'Orbitron', sans-serif; text-align: center; margin: 0; padding: 0; overflow-x: hidden; } canvas { background: #111; display: block; margin: 20px auto; border: 3px solid #00ffe0; box-shadow: 0 0 20px #00ffe0; max-width: 90vw; height: auto; } h1 { margin-top: 20px; font-size: 2.5em; color: #ff0055; text-shadow: 0 0 10px #ff0055; } #score, #level { font-size: 1.2em; margin-top: -10px; color: #fff; } #branding { margin-top: 10px; font-size: 0.9em; color: #888; } #restartButton, #pauseButton { margin-top: 15px; padding: 10px 20px; font-size: 1em; background-color: #ff0055; color: #fff; border: none; border-radius: 5px; cursor: pointer; box-shadow: 0 0 10px #ff0055; transition: background-color 0.3s ease; } #restartButton:hover, #pauseButton:hover { background-color: #e6004c; } #gameOverScreen { position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(0, 0, 0, 0.95); border: 3px solid #ff0055; box-shadow: 0 0 20px #ff0055; padding: 30px 50px; color: #ff0055; font-family: 'Orbitron', sans-serif; font-size: 1.5em; text-align: center; display: none; z-index: 1000; border-radius: 10px; width: 90vw; max-width: 400px; } #gameOverScreen button { margin-top: 20px; padding: 10px 25px; font-size: 1.2em; background-color: #ff0055; color: #fff; border: none; border-radius: 5px; cursor: pointer; box-shadow: 0 0 10px #ff0055; transition: background-color 0.3s ease; } #gameOverScreen button:hover { background-color: #e6004c; } #controlsContainer { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; max-width: 600px; margin: 20px auto; } #desktopControls { display: flex; gap: 15px; } #desktopControls button { padding: 10px 20px; font-size: 1em; background-color: #ff0055; color: #fff; border: none; border-radius: 5px; cursor: pointer; box-shadow: 0 0 10px #ff0055; transition: background-color 0.3s ease; } #desktopControls button:hover { background-color: #e6004c; } @media (max-width: 600px) { #desktopControls { display: flex; justify-content: center; gap: 10px; } canvas { width: 100vw; height: auto; } } </style> <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet"> </head> <body> <h1>Sp1Dy_Gamer™ Tetris</h1> <div id="score">Score: 0</div> <div id="level">Level: 0</div> <canvas id="tetris" width="240" height="400"></canvas> <div id="controlsContainer"> <div id="desktopControls"> <button id="pauseButton">Pause Game</button> <button id="restartButton">Restart Game</button> </div> </div> <div id="branding"> 🎮 Powered by Sp1Dy_Gamer™ | Subscribe for epic gaming content! </div> <div id="gameOverScreen"> <div id="finalScore">Game Over! Your Score: 0</div> <button id="gameOverRestart">Restart Game</button> </div>
 
 <!-- Audio elements with unique IDs --> <audio id="dropSound" src="drop.mp3"></audio> <audio id="clearSound" src="clear.mp3"></audio> <audio id="gameOverSound" src="gameover.mp3"></audio> <audio id="bgMusic" src="bg.mp3" preload="auto" loop></audio>
 
@@ -213,24 +213,11 @@ function update(time = 0) {
   requestAnimationFrame(update);
 }
 
-// Start background music on user interaction for mobile
-function startBackgroundMusic() {
+document.addEventListener('keydown', () => {
   const bgMusic = document.getElementById('bgMusic');
   if (bgMusic.paused) {
     bgMusic.play().catch(() => {});
   }
-}
-
-document.addEventListener('keydown', () => {
-  startBackgroundMusic();
-});
-
-document.getElementById('tetris').addEventListener('touchstart', () => {
-  startBackgroundMusic();
-});
-
-document.getElementById('controlsContainer').addEventListener('touchstart', () => {
-  startBackgroundMusic();
 });
 
 document.addEventListener('keydown', event => {
@@ -257,58 +244,6 @@ document.getElementById('gameOverRestart').addEventListener('click', () => {
   resetGame();
 });
 
-// Gesture controls for mobile
-let touchStartX = null;
-let touchStartY = null;
-let touchStartTime = 0;
-
-canvas.addEventListener('touchstart', e => {
-  if (player.paused || player.gameOver) return;
-  if (e.touches.length === 1) {
-    touchStartX = e.touches[0].clientX;
-    touchStartY = e.touches[0].clientY;
-    touchStartTime = Date.now();
-  }
-});
-
-canvas.addEventListener('touchend', e => {
-  if (player.paused || player.gameOver) return;
-  if (touchStartX === null || touchStartY === null) return;
-
-  const touchEndX = e.changedTouches[0].clientX;
-  const touchEndY = e.changedTouches[0].clientY;
-  const dx = touchEndX - touchStartX;
-  const dy = touchEndY - touchStartY;
-  const dt = Date.now() - touchStartTime;
-
-  const swipeThreshold = 30; // Minimum distance in px for swipe
-  const tapMaxTime = 300; // Max time in ms for tap
-  const tapMaxDistance = 10; // Max movement in px for tap
-
-  if (dt < tapMaxTime && Math.abs(dx) < tapMaxDistance && Math.abs(dy) < tapMaxDistance) {
-    // Tap detected: rotate piece
-    playerRotate(1);
-  } else if (Math.abs(dx) > Math.abs(dy)) {
-    // Horizontal swipe
-    if (dx > swipeThreshold) {
-      // Swipe right
-      playerMove(1);
-    } else if (dx < -swipeThreshold) {
-      // Swipe left
-      playerMove(-1);
-    }
-  } else {
-    // Vertical swipe
-    if (dy > swipeThreshold) {
-      // Swipe down
-      playerDrop();
-    }
-  }
-
-  touchStartX = null;
-  touchStartY = null;
-});
-
 function resetGame() {
   arena.forEach(row => row.fill(0));
   player.score = 0;
@@ -325,12 +260,6 @@ function showGameOverScreen() {
   const scoreDisplay = document.getElementById('finalScore');
   scoreDisplay.textContent = 'Game Over! Your Score: ' + player.score;
   screen.style.display = 'block';
-  // Stop background music when game over
-  const bgMusic = document.getElementById('bgMusic');
-  if (!bgMusic.paused) {
-    bgMusic.pause();
-    bgMusic.currentTime = 0;
-  }
 }
 
 function hideGameOverScreen() {
