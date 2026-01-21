@@ -1,4 +1,4 @@
 # tetris-game
 Classic Tetris game built using HTML, CSS, and JavaScript
-**LINK TO PLAY**
+### Link to Play : 
 https://bhimnexus.github.io/tetris-game/index.html
